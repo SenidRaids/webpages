@@ -8,7 +8,7 @@ const Portfolio = () => {
     {
       title: 'Age Calculator',
       description: 'A tool that calculates age based on the provided date of birth.',
-      link: 'https://github.com/SenidRaids/-ToneTrend.git',
+      link: 'Age Calculator',
     },
     {
       title: 'Arithmetic Calculator',
