@@ -1,4 +1,6 @@
+ 
 import React from 'react';
+import { motion } from 'framer-motion';
 import '../Styles/Portfolio.css';
 
 const Portfolio = () => {
@@ -6,7 +8,7 @@ const Portfolio = () => {
     {
       title: 'Age Calculator',
       description: 'A tool that calculates age based on the provided date of birth.',
-      link: '/age-calculator',
+      link: 'https://github.com/SenidRaids/-ToneTrend.git',
     },
     {
       title: 'Arithmetic Calculator',
@@ -21,23 +23,50 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="portfolio-page">
+    <motion.div 
+      className="portfolio-page"
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       <header>
-        <h1>My Portfolio</h1>
+        <motion.h1
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          My Portfolio
+        </motion.h1>
       </header>
       <section className="projects">
-        <h2>Projects</h2>
-        <div className="project-cards">
+        <motion.h2
+          initial={{ x: -20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Projects
+        </motion.h2>
+        <motion.div 
+          className="project-cards"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
           {projects.map((project, index) => (
-            <div className="project-card" key={index}>
+            <motion.div
+              className="project-card"
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <a href={project.link} className="project-link">View Project</a>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

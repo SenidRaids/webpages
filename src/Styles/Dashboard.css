@@ -47,4 +47,18 @@
   .actions button:hover {
     background-color: #0056b3;
   }
+  .logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-bottom:20px;
+  }
+  
+  .logout-button:hover {
+    background-color: #ff1a1a;
+  }
   
